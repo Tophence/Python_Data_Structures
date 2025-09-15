@@ -15,6 +15,8 @@ patients = {
 # Access data
 print("Cardiologist on duty:", staff[101]['name'])  # Dr. Smith
 print("John's allergies:", patients["P881"]["allergies"])  # ['Penicillin']
+print("Nurse on Duty:", staff[202]['name'])
+print("Garcia's allergy:", patients['P882']['allergies'])
 
 # Add new patient
 patients["P883"] = {"name": "Alex Kim", "allergies": ["Latex"], "ward": "ER"}

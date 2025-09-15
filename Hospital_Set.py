@@ -5,8 +5,9 @@ sterile_er_equipment = {"Stethoscope", "Defibrillator", "Sutures"}
 
 # Contaminated items
 contaminated = {"Defibrillator", "Sutures", "Scalpel"}
+print("Contaminated items: ",contaminated)
 
-# Sterilize ER equipment
+# Sterilized ER equipment which is not contaminated
 sterile_er_equipment -= contaminated
 print("Sterile ER Equipment:", sterile_er_equipment)  
 # Output: {'Stethoscope'}
@@ -15,3 +16,4 @@ print("Sterile ER Equipment:", sterile_er_equipment)
 all_sterile = sterile_lab_equipment | sterile_er_equipment
 print("All Sterile Equipment:", all_sterile)  
 # Output: {'Microscope', 'Centrifuge', 'Pipettes', 'Stethoscope'}
+

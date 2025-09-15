@@ -1,14 +1,14 @@
 #Patient Triage & Emergency Room Queue Management -First-In-First-Out (FIFO) for fair patient processing
 # Using deque for efficient queue operations
-from collections import deque
+from collections import deque # deque helps us remove stuff when engaged
 
 # ER Patient Queue (Critical → Stable)
-er_queue = deque()
+er_queue = deque() # we want the er_que managed by the deque function
 
 # Patients arrive (critical cases jump queue)
 er_queue.append("Broken Arm")        # Stable case
 er_queue.append("Severe Burn")       # Critical case
-er_queue.appendleft("Heart Attack")  # MOST critical
+er_queue.appendleft("Heart Attack")  # MOST critical - pushed him to the first
 
 print("ER Queue:", list(er_queue))  
 # Output: ['Heart Attack', 'Broken Arm', 'Severe Burn']

@@ -6,11 +6,14 @@ medication_stack = []
 medication_stack.append("Antibiotics")
 medication_stack.append("Painkillers")
 medication_stack.append("Insulin")
+medication_stack.append("Mara Moja")
+medication_stack.append("Syrup")
 
 print("Pharmacy Stock:", medication_stack)  
-# Output: ['Antibiotics', 'Painkillers', 'Insulin']
+# Output:  ['Antibiotics', 'Painkillers', 'Insulin', 'Mara Moja', 'Syrup']
+
 
 # Dispense medications
-for _ in range(2):
+for _ in range(3):
     dispensed = medication_stack.pop()
     print(f"Dispensed: {dispensed} → Remaining: {medication_stack}")

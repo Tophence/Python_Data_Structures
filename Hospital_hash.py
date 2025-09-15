@@ -1,10 +1,12 @@
 # Doctor Authentication System
-import hashlib
+# Ho we can have different users been authenticated
+import hashlib     # we call the library hashlib which contains digital encryption tools
 
 # Database of Doctors (Hash Map: Username → Hashed Password + Details)
+# we will use the the doctors database as a hash map(a map is table that can be accessed by various keys)
 doctors_db = {
     # Format: {username: {"password_hash": "...", "name": "...", "department": "..."}}
-    "dr_strange": {
+    "dr_strange": { 
         "password_hash": hashlib.sha256("Spell@2024".encode()).hexdigest(),
         "name": "Stephen Strange",
         "department": "Neurosurgery"
@@ -44,7 +46,7 @@ def doctor_login(username: str, password: str):
         print("❌ User not found")
         return False
     
-    # Hash the attempt
+    # Hash the attempt - we do not want the user to access all the time
     attempt_hash = hashlib.sha256(password.encode()).hexdigest()
     stored_hash = doctors_db[username]["password_hash"]
     
